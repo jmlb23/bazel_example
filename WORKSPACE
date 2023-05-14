@@ -68,7 +68,10 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "org.typelevel:cats-effect_2.12:3.5.0"
+        "org.typelevel:cats-effect_2.12:3.5.0",
+        "org.tpolecat:doobie-core_2.13:1.0.0-RC1",
+        "org.http4s:http4s-dsl_2.13:1.0.0-M39",
+        "org.http4s:http4s-ember-server_2.13:1.0.0-M39"
     ],
     repositories = [
         "https://repo1.maven.org/maven2",

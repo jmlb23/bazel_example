@@ -18,11 +18,5 @@ toolchain(
 scala_binary(
     name = "backend",
     main_class = "com.github.jmlb23.Main",
-    srcs = glob([
-        "**/*.scala"
-    ]),
-    deps = [
-       "@maven//:org_typelevel_cats_effect_2_12",
-       "@maven//:org_typelevel_cats_core_2_12"
-    ],
+    deps = ["//backend/app:app"]
 )
