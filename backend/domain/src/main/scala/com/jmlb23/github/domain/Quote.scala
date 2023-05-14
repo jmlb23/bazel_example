@@ -5,7 +5,7 @@ import scala.util.Failure
 import scala.util.Success
 
 
-case class NonEmptyString(content: String)
+case class NonEmptyString private (content: String)
 
 case object NonEmptyString {
   def apply(content: String): Try[NonEmptyString] = content match {
