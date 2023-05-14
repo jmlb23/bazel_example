@@ -6,8 +6,8 @@ object Main extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
     args match {
       case name :: xs =>
-        IO(println(s"Hello, $name.")).as(ExitCode.Success)
+        IO.println(s"Hello, $name.").as(ExitCode.Success)
       case Nil =>
-        IO(System.err.println("Usage: MyApp name")).as(ExitCode(2))
+        IO.println("Usage: MyApp name").as(ExitCode(2))
     }
 }
